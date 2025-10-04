@@ -6,8 +6,9 @@ import statusCode from 'http-status-codes';
 import AppError from "../../errorHelpers/AppError";
 import { setAuthCookie } from "../../utils/setCookie";
 import { createUserTokens } from "../../utils/userTokens";
-import { User } from "@prisma/client";
+
 import { AuthService } from "./auth.service";
+import { User } from "@prisma/client";
 
 const login = catchAsync(async (req: Request, res: Response) => {
     const email = await req.body.email;
